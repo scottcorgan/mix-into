@@ -1,6 +1,8 @@
 # mix-into
 
-Mix objects into other objects
+Mix objects into other objects.
+
+By adopting the "mix into" methodology, your code avoids the mess of "add this mixin; add this mixin; add this mixin". Istead, you can dynamically nest and defer the the mixin process.
 
 ## Install
 
@@ -28,11 +30,11 @@ mix(baseMixin).into(obj);
 obj.baseMethod(); // OUTPUTS: 'some value'
 ```
 
-#### Partial Function
+#### Partial Applied Mixin
 
 ```js
 var mix = require('mix-into');
-var baseMixin = mix{
+var baseMixin = mix({
   baseValue: 'some value',
   baseMethod: function () {
     return baseValue;
