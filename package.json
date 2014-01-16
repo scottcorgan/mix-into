@@ -1,0 +1,28 @@
+{
+  "name": "mix-into",
+  "version": "0.1.0",
+  "description": "Mix objects into other objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js | node_modules/.bin/tspec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scottcorgan/mix-into.git"
+  },
+  "keywords": [
+    "mix",
+    "into",
+    "objects",
+    "extend"
+  ],
+  "author": "Scott Corgan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scottcorgan/mix-into/issues"
+  },
+  "devDependencies": {
+    "tape": "~2.3.2",
+    "tap-spec": "~0.1.3"
+  }
+}
