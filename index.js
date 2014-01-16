@@ -1,4 +1,3 @@
-
 var mix = function (source) {
   return new Mix(source);
 };
