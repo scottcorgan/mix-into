@@ -71,6 +71,19 @@ obj.mixInto(obj2); // mixInto method added to each object that's mixed into
 obj2.objMethod() // OUTPUS: 'some value'
 ```
 
+#### Create New Object from Mixin
+
+```js
+var mix = require('mix-into');
+var baseMixin = mix({
+  value1: 'value1'
+});
+
+var obj = baseMixin.create();
+
+console.log(obj.value1); // OUTPUTS: 'value1'
+```
+
 ## Run Tests
 
 ```

@@ -64,3 +64,19 @@ test('creates wrapper to mix object into other objects', function (t) {
   t.equal(obj.value1, 'value1', 'mixin occurred');
   t.end();
 });
+
+test('returns mixed object', function (t) {
+  var obj = {};
+  obj = mix(mixin).into(obj);
+  
+  t.equal(obj.value1, 'value1', 'mixed the object');
+  t.end();
+});
+
+test('returns a new object if no object is given', function (t) {
+  var mixed = mix(mixin);
+  var obj = mixed.create();
+  
+  t.equal(obj.value1, 'value1', 'mixed with no object');
+  t.end();
+});

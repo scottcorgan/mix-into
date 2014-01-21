@@ -7,6 +7,8 @@ var Mix = function (source) {
 };
 
 Mix.prototype.into = function (target) {
+  target = target || {};
+  
   var keys = Object.keys(this.source);
   var len = keys.length;
   var i = 0;
@@ -21,10 +23,16 @@ Mix.prototype.into = function (target) {
   }
   
   if (target.mixInto === undefined) target.mixInto = mixInto;
+  
+  return target;
 };
 
 Mix.prototype.mixInto = function (target) {
   return this.into(target);
+};
+
+Mix.prototype.create = function () {
+  return this.into({});
 };
 
 function mixInto (source) {
