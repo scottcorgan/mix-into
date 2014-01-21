@@ -1,3 +1,5 @@
+var clone = require('clone');
+
 var mix = function (source) {
   return new Mix(source);
 };
@@ -32,7 +34,7 @@ Mix.prototype.mixInto = function (target) {
 };
 
 Mix.prototype.create = function () {
-  return this.into({});
+  return clone(this.source);
 };
 
 function mixInto (source) {

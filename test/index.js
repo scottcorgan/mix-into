@@ -74,8 +74,13 @@ test('returns mixed object', function (t) {
 });
 
 test('returns a new object if no object is given', function (t) {
+  var mixin = {
+    value1: 'value1'
+  };
   var mixed = mix(mixin);
   var obj = mixed.create();
+  
+  mixin.value1 = 'value2';
   
   t.equal(obj.value1, 'value1', 'mixed with no object');
   t.end();
