@@ -1,4 +1,4 @@
-var clone = require('clone');
+var clone = require('copy');
 
 var mix = function (source) {
   return new Mix(source);
