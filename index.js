@@ -1,4 +1,4 @@
-var clone = require('copy');
+var clone = require('deap').cone;
 
 var mix = function (source) {
   return new Mix(source);
