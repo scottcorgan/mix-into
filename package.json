@@ -1,6 +1,6 @@
 {
   "name": "mix-into",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Mix objects into other objects",
   "main": "index.js",
   "scripts": {
