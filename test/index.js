@@ -85,3 +85,22 @@ test('returns a new object if no object is given', function (t) {
   t.equal(obj.value1, 'value1', 'mixed with no object');
   t.end();
 });
+
+test('deep clones the target object', function (t) {
+  var mixin = {
+    key1: 'value1'
+  };
+  var target = {
+    key2: 'value2'
+  };
+  
+  var mixedObject = mix(mixin).intoClone(target);
+  
+  t.ok(mixedObject.key1, 'mixin key');
+  t.ok(mixedObject.key2, 'target key');
+  
+  target.key2 = 'new value2';
+  
+  t.equal(mixedObject.key2, 'value2', 'mixed object stays the same');
+  t.end();
+});

@@ -1,4 +1,4 @@
-var clone = require('deap').cone;
+var clone = require('deap').clone;
 
 var mix = function (source) {
   return new Mix(source);
@@ -27,6 +27,10 @@ Mix.prototype.into = function (target) {
   if (target.mixInto === undefined) target.mixInto = mixInto;
   
   return target;
+};
+
+Mix.prototype.intoClone = function (target) {
+  return this.into(clone(target));
 };
 
 Mix.prototype.mixInto = function (target) {
